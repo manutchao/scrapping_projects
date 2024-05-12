@@ -40,6 +40,7 @@ class ClientSelenium:
     def __init__(self):
         options = Options()
         options.add_argument("-headless")
+        log.info("Start Selenium")
         self.driver = webdriver.Firefox(
             options=options,
             service=Service(executable_path=GeckoDriverManager().install()),
@@ -47,5 +48,5 @@ class ClientSelenium:
 
     def __exit__(self, exc_type, exc_value, traceback):
         """Close selenium driver"""
-        print("close selenium")
+        log.info("Stop Selenium")
         self.driver.quit()
