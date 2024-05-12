@@ -1,4 +1,5 @@
 """ Script to export data from the website ouifm.fr """
+
 import argparse
 from datetime import datetime
 import sys
@@ -7,7 +8,6 @@ sys.path.append("..")
 
 
 from Utils import Utils
-
 from RadioScrapper import RadioScrapper
 
 
